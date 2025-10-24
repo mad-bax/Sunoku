@@ -1,0 +1,17 @@
+[package]
+name = "sunoku"
+version = "0.1.0"
+edition = "2024"
+author = ["Bax <madbax@proton.me>"]
+
+[profile.release]
+    opt-level = 3       # Compiler optimization level
+    debug = false       # Specify the amount of debug information included.
+    lto = true          # LLVM 'Link-Time-Optimizations', increases link time.
+    codegen-units = 1   # Limit how many 'code-generation' units a crate will be broken into.
+                        # Lower values produce faster code at the expense of longer compile times.
+    panic = 'abort'     # Abort on `panic!`, causes memory leaks on exit.
+    strip = true        # Strip out *all* symbols.
+
+[dependencies]
+    clap = { version = "4.5.49", features = ["derive"] }
