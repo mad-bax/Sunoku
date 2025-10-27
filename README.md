@@ -12,7 +12,7 @@ cargo build --release
 
 The solver can solve puzzles whose sides are some square number. I.e., 9, 16, 25, 36, ... etc. It may be able to solve 'non square' board sizes but I have not tested thoroughly.
 
-There are two algorithms given, a `Naive` method and my personal strategy made algorithmic, nicknamed `BaxStrat`. The Naive method is a simple brute force which takes and $O(m^{n \times n})$ time to complete where $n$ is the size of the board and $m$ is the number of assignable values. The second method `BaxStrat` iterates over the board and looks for various patterns with the board values to eliminate possibilities before handing off the board to the Naive solver. At worst it has the same performance as the Naive approach though it generally out performs Naive for most boards.
+There are two algorithms given, a `Naive` method and my personal strategy made algorithmic, nicknamed `BaxStrat`. The Naive method is a simple brute force which takes and $O(n^3)$ time to complete where $n$ is the size of the board. The second method `BaxStrat` iterates over the board and looks for various patterns with the board values to eliminate possibilities before handing off the board to the Naive solver. At worst it has the same performance as the Naive approach though it generally out performs Naive for most boards.
 
 ## Input File Formats
 
